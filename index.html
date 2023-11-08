@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco.Js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="signofhealth.ico">
+</head>
+
+<body>
+    <!-- navbar -->
+    <img src="img.fundo.png" alt="Imagem de Fundo" class="background-image">
+    
+    <nav class="navbar">
+        <a href="#">INÍCIO</a>
+        <a href="#">CONTAS</a>
+        <a href="#">TRANSAÇÕES</a>
+        <a href="#">SOBRE</a>
+    </nav>
+    <br> <br>
+
+    <div class="container">
+
+        <div class="container-filho1">
+
+            <div class="left-panel">
+                <h1>Gerenciador de Contas Bancárias</h1>
+
+                <!-- inicio do formulario bancário -->
+                <div class="form">
+                    <label style="display: block; margin-top: 5px; margin-bottom: 10px;" for="agencia"> <strong>Agência:
+                        </strong> </label>
+                    <input type="number" id="agencia" class="input">
+                    <br>
+                    <label style="display: block; margin-top: 5px; margin-bottom: 10px;" for="numero"> <strong>Número:
+                        </strong> </label>
+                    <input type="number" id="numero" class="input">
+                    <br>
+
+                    <!-- inicio tipo de conta -->
+                    <label style="display: block; margin-top: 5px; margin-bottom: 10px;" for="tipo"> <strong>Tipo de
+                            Conta:
+                        </strong> </label>
+                    <select style="width: 443px;" id="tipo" class="input">
+                        <option value="corrente">Conta Corrente</option>
+                        <option value="poupanca">Conta Poupança</option>
+                        <option value="universitaria">Conta Universitária</option>
+                    </select>
+                    <br>
+
+                    <label style="display: block; margin-top: 5px; margin-bottom: 10px;" for="saldo"> <strong>Saldo:
+                        </strong> </label>
+                    <input type="number" id="saldo" class="input">
+                    <button onclick="inserirConta()" class="button">Depositar</button>
+                    <button onclick="sacarValor()" class="button">Sacar</button>
+                </div>
+
+                <!-- div visualizar contas -->
+                <div class="actions">
+                    <button onclick="visualizarContas()" class="button">Visualizar Contas</button>
+                    <button onclick="deletarConta()" class="button">Deletar Conta</button>
+
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div id="listaContas" class="lista-contas"></div>
+            </div>
+
+        </div>
+
+        <!-- Divs dos gráficos -->
+        <div class="container-filho2">
+            <div class="bloco">
+                <canvas id="graficoBarras" width="250" height="250"></canvas>
+            </div>
+
+            <div class="bloco">
+                <canvas id="graficoPizza" width="250" height="250"></canvas>
+            </div>
+
+            <div class="bloco">
+                <canvas id="graficoLinhas" width="250" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- inicio do footer -->
+    <footer class="footer">
+        <div>
+            <h3>Sobre o programa:</h3>
+            <p>Este é um site de que simula gerenciamento de transações bancárias.</p>
+            <p>Onde podemos Depositar, Sacar, Visualizar e Deletar as Contas bancárias.</p>
+
+        </div>
+        <div>
+            <h3>Contato</h3>
+            <p>Email: pcdasilvabeserra@gmail.com</p>
+            <p>Email 2: pedro.00000850240@unicap.br</p>
+        </div>
+        <div>
+            <h3>Redes Sociais</h3>
+            <ul class="social-links">
+                <li><a href="https://github.com/PedroCezardev">Github</a></li>
+                <br>
+                <li><a href="https://www.linkedin.com/in/pedro-cezar-77a444270/">Linkedln</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/_pedrodev0/">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
